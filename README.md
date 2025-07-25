@@ -47,9 +47,35 @@ This blog post explains:
 3. Start your project with PACT methodology
 
 ### Using with Claude Code
+
+#### Basic Setup
 1. Copy the contents of `PACT_Prompt.md`
-2. USe the command `/init` to create your CLAUDE.md (if you haven't already)
+2. Use the command `/init` to create your CLAUDE.md (if you haven't already)
 3. Add the prompt to the beginning of your CLAUDE.md
+
+#### Advanced: PACT Sub-Agents for Claude Code
+For enhanced workflow automation, use the specialized PACT sub-agents included in this repository:
+
+**Setup Instructions:**
+1. Copy the entire `claude agents/` folder to your project's `.claude/agents/` directory
+2. Or copy individual agent files from `claude agents/` to your global `~/.claude/agents/` directory
+3. Restart Claude Code to load the new sub-agents
+
+**Available PACT Sub-Agents:**
+- **🎯 PACT Orchestrator** (`CLAUDE.md`): Main coordinator that manages the entire PACT workflow
+- **📚 pact-preparer**: Research and documentation specialist for the Prepare phase
+- **🏛️ pact-architect**: System design expert for the Architect phase  
+- **💻 pact-backend-coder**: Backend implementation specialist for the Code phase
+- **🎨 pact-frontend-coder**: Frontend implementation specialist for the Code phase
+- **🗄️ pact-database-engineer**: Database design and implementation specialist for the Code phase
+- **🧪 pact-test-engineer**: Quality assurance and testing specialist for the Test phase
+
+**Usage:**
+- The Orchestrator automatically delegates tasks to appropriate specialists
+- Use explicit commands like: "Use the pact-preparer agent to research API documentation"
+- Run `/agents` to see all available sub-agents
+
+Learn more about Claude Code sub-agents: [docs.anthropic.com/en/docs/claude-code/sub-agents](https://docs.anthropic.com/en/docs/claude-code/sub-agents)
 
 ### Using with Cline (VS Code Extension)
 1. Copy the contents of `PACT_Prompt.md`
